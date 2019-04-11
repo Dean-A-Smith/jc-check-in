@@ -11,7 +11,7 @@ router.post('/name', function (req, res) {
   let hasAppointment = req.session.data['has-appointment']
 
   if (hasAppointment === 'yes') {
-    res.redirect('/name')
+    res.redirect('/name-single-field')
   } else {
     res.redirect('/does-not-have-appointment')
   }
