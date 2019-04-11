@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Full name - Check in for your Jobcentre Plus appointment
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/if-has-appointment">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/date-of-birth" method="post">
+
+      <h1 class="govuk-heading-xl">What is your name?</h1>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="full-name">
+            Given names
+          </label>
+          <input class="govuk-input" id="full-name" name="full-name" type="text" autocomplete="name" spellcheck="false">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="full-name">
+            Family name
+          </label>
+          <input class="govuk-input" id="full-name" name="full-name" type="text" autocomplete="name" spellcheck="false">
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

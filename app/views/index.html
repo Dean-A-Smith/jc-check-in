@@ -1,0 +1,65 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        The GOV.UK Prototype Kit
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+
+      <p>A prototype to help the Digital Jobcentres team research people's experiences in checking in for scheduled appointments.</p>  
+
+      <p>I'm interested in:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>people's ability to enter their details due to the size and location of the device in the jobcentre</li>
+        <li>how people write their names compared to those held in DWP's records - eg name ordering, parts of name possibly being omitted or written incorrectly</li>
+        <li>how people enter special characters</li>
+        <li>how little we need to gather in order to identify someone, when there could be hundreds of appointments</li>
+        <li>how reliably we can direct people to waiting areas, if the number and location of these are different in every jobcentre</li>
+        <li>how we design for people with accessibility needs</li>
+        <li>how we design for people with low literacy, or who speak and read a different language</li>
+        <li>how we can test sending staff a message once someone completes the form</li>            
+      </ul>
+
+      <p>Phil Swan suggests we observe people trying to use the GP check-in system - what issues do people have with their approach?</p>
+
+     <h2 class="govuk-heading-m">Initial pages</h2>
+
+     <ul class="govuk-list govuk-list--bullet">
+       <li><a href="/if-has-appointment">If they have an appointment today</a></li>
+       <li><a href="/name-single-field">Name - single text field</a></li>
+       <li><a href="/name-separate-fields">Name - separate text fields (if single text field does not test well)</a></li>
+       <li><a href="/date-of-birth">Date of birth</a></li>
+       <li><a href="/details-do-not-match">Details do not match an appointment record - check answers</a></li>
+     </ul>
+
+     <h2 class="govuk-heading-m">Possible outcome pages</h2>
+
+     <ul class="govuk-list govuk-list--bullet">
+       <li><a href="/has-appointment-is-on-time">Has an appointment, is on time</a></li>
+       <li><a href="/has-appointment-is-late">Has an appointment, is late</a></li>       
+       <li><a href="/cannot-find-appointment">Cannot find appointment</a></li>
+       <li><a href="/does-not-have-appointment">Does not have an appointment</a></li>       
+     </ul>
+
+      <h2 class="govuk-heading-m">Examples and documentation</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
+        <li>
+          <a href="https://design-system.service.gov.uk">
+            GOV.UK Design System
+          </a>
+        </li>
+      </ul>
+    </div>
+</div>
+
+{% endblock %}

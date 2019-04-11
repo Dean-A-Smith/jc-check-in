@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/if-has-appointment" method="post">
+
+      <h1 class="govuk-heading-xl">Please go to the waiting area</h1>
+
+      <p>Your appointment was due to start at 1pm with Dave Coachman. The time is now 1:15pm.</p>
+
+      <p>We've told reception staff that you're here. Someone will come to see you when they are free to help.</p>
+
+      <button class="govuk-button">Finish</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
