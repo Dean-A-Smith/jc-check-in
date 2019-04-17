@@ -9,9 +9,9 @@
 
 {{ govukPhaseBanner({
   tag: {
-    text: "prototype"
+    text: "Testing only"
   },
-  html: 'This is a new service for use in research.'
+  html: 'Messages will not be sent and no data is saved.'
 }) }}
 
   <a class="govuk-back-link" href="/date-of-birth">Back</a>
@@ -28,15 +28,29 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Full name
+            Given names
           </dt>
           <dd class="govuk-summary-list__value">
-            Sarah Philips
+            {{ data['given-names'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/name-separate-fields">
               Change
-              <span class="govuk-visually-hidden"> name</span>
+              <span class="govuk-visually-hidden"> given names</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Family name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['family-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/name-separate-fields">
+              Change
+              <span class="govuk-visually-hidden"> family name</span>
             </a>
           </dd>
         </div>
@@ -45,7 +59,7 @@
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            5 January 1978
+            {{ data['birth-day'] }}/{{ data['birth-month'] }}/{{ data['birth-year'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/date-of-birth">

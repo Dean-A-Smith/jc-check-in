@@ -9,9 +9,9 @@
 
 {{ govukPhaseBanner({
   tag: {
-    text: "prototype"
+    text: "Testing only"
   },
-  html: 'This is a new service for use in research.'
+  html: 'Messages will not be sent and no data is saved.'
 }) }}
 
   <a class="govuk-back-link" href="/name-separate-fields">Back</a>
@@ -37,10 +37,10 @@
             <div class="govuk-date-input" id="dob">
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="dob">
+                  <label class="govuk-label govuk-date-input__label" for="birth-day">
                     Day
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="birth-day" name="birth-day" type="number" pattern="[0-9]*">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="birth-day" name="birth-day" type="number" pattern="[0-9]*" value="{{ data['birth-day'] }}">
                 </div>
               </div>
               <div class="govuk-date-input__item">
@@ -48,7 +48,7 @@
                   <label class="govuk-label govuk-date-input__label" for="birth-month">
                     Month
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="birth-month" name="birth-month" type="number" pattern="[0-9]*">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="birth-month" name="birth-month" type="number" pattern="[0-9]*" value="{{ data['birth-month'] }}">
                 </div>
               </div>
               <div class="govuk-date-input__item">
@@ -56,7 +56,7 @@
                   <label class="govuk-label govuk-date-input__label" for="birth-year">
                     Year
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="birth-year" name="birth-year" type="number" pattern="[0-9]*">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="birth-year" name="birth-year" type="number" pattern="[0-9]*" value="{{ data['birth-year'] }}">
                 </div>
               </div>
             </div>

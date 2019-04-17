@@ -9,9 +9,9 @@
 
 {{ govukPhaseBanner({
   tag: {
-    text: "prototype"
+    text: "Testing only"
   },
-  html: 'This is a new service for use in research.'
+  html: 'Messages will not be sent and no data is saved.'
 }) }}
 
   <a class="govuk-back-link" href="/if-has-appointment">Back</a>
@@ -27,17 +27,17 @@
       <h1 class="govuk-heading-xl">What is your name?</h1>
 
         <div class="govuk-form-group">
-          <label class="govuk-label" for="full-name">
+          <label class="govuk-label" for="given-names">
             Given names
           </label>
-          <input class="govuk-input" id="full-name" name="full-name" type="text" autocomplete="name" spellcheck="false">
+          <input class="govuk-input" id="given-names" name="given-names" type="text" autocomplete="name" spellcheck="false" value="{{ data['given-names'] }}">
         </div>
 
         <div class="govuk-form-group">
-          <label class="govuk-label" for="full-name">
+          <label class="govuk-label" for="family-name">
             Family name
           </label>
-          <input class="govuk-input" id="full-name" name="full-name" type="text" autocomplete="name" spellcheck="false">
+          <input class="govuk-input" id="family-name" name="family-name" type="text" autocomplete="name" spellcheck="false" value="{{ data['family-name'] }}">
         </div>
 
         <button class="govuk-button">Continue</button>
