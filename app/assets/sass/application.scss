@@ -12,4 +12,9 @@ $govuk-global-styles: true;
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 
+.extended-header {
+  width: 100%;
+  padding-bottom: .3rem;
+}
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you

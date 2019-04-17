@@ -1,0 +1,21 @@
+<header class="govuk-header {{ params.classes if params.classes }}" role="banner" data-module="header"
+        {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+  <div class="govuk-header__container {{ params.containerClasses | default('govuk-width-container') }}">
+
+    <div class="extended-header">
+      <a href="{{ params.homepageUrl | default('/') }}" class="govuk-header__link govuk-header__link--homepage extended-header">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            Check in for your Jobcentre Plus appointment
+          </span>
+        </span>
+        {% if (params.productName) %}
+        <span class="govuk-header__product-name">
+          {{ params.productName }}
+        </span>
+        {% endif %}
+      </a>
+    </div>
+
+  </div>
+</header>
