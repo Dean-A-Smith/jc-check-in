@@ -19,12 +19,12 @@ router.post('/name-separate-fields', function (req, res) {
 
 router.post('/has-appointment-is-on-time', function (req, res) {
 
-  let personID = req.session.data['birth-year']
+  let personID = req.session.data['birth-month']
 
-  if (personID === '1977') {
+  if (personID < 5) {
     res.redirect('/has-appointment-is-on-time')
   } 
-  else if (personID === '1970') {
+  else if (personID < 9) {
     res.redirect('/has-appointment-is-late')
   }
   else {
